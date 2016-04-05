@@ -1,5 +1,5 @@
-# A-Gold-Coin
 A+ Gold Coin Open Source Code  v1.3.2
+
 www.icardgod.org
 
 A+ Gold Coin Open Source Code Copyright (c) 2016 AGOLD Developers
