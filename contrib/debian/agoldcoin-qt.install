@@ -1,0 +1,5 @@
+agoldcoin-qt usr/bin
+share/pixmaps/agoldcoin32.xpm usr/share/pixmaps
+share/pixmaps/agoldcoin80.xpm usr/share/pixmaps
+debian/agoldcoin-qt.desktop usr/share/applications
+debian/agoldcoin-qt.protocol usr/share/kde4/services/

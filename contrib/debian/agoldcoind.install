@@ -1,0 +1,2 @@
+debian/bin/agoldcoind usr/bin
+src/agoldcoind usr/lib/agoldcoin

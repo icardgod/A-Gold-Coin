@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=agoldcoin
+Comment=agoldcoin P2P Cryptocurrency
+Comment[fr]=agoldcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=agoldcoin, eşten eşe kriptografik sanal para birimi
+Exec=/usr/bin/agoldcoin-qt
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/agoldcoin.xpm
+MimeType=x-scheme-handler/agoldcoin;
+Categories=Office;

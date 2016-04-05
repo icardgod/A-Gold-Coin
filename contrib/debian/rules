@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+# -*- mode: makefile; coding: utf-8 -*-
+
+#DEB_MAKE_CHECK_TARGET = test_agoldcoin
+#build/agoldcoind::
+#	$(if $(filter nocheck,$(DEB_BUILD_OPTIONS)),,src/test_agoldcoin)
+
+DEB_INSTALL_EXAMPLES_agoldcoind += debian/examples/*
+DEB_INSTALL_MANPAGES_agoldcoind += debian/manpages/*
+
+%:
+	dh --with bash-completion $@
+
+override_dh_auto_build:
+	cd src; $(MAKE) -f makefile.unix agoldcoind
+	$(MAKE)
+
+override_dh_auto_clean:
+	if [ -f Makefile ]; then $(MAKE) clean; else rm -rf build/; rm -f agoldcoin-qt; fi
+	cd src; $(MAKE) -f makefile.unix clean
+
+override_dh_auto_configure:
+	qmake agoldcoin-qt.pro USE_QRCODE=1
+
+override_dh_auto_test:
+	cd src; $(MAKE) -f makefile.unix test_agoldcoin
+	src/test_agoldcoin
+
+# Ensure wrapper is set executable
+binary-post-install/agoldcoind:
+	chmod +x $(cdbs_curdestdir)usr/bin/agoldcoind
+binary-post-install/agoldcoin-qt:
+	chmod +x $(cdbs_curdestdir)usr/bin/agoldcoin-qt

@@ -1,0 +1,59 @@
+Source: Agoldcoin
+Section: utils
+Priority: optional
+Maintainer: konas gaard <kg@icardgod.com>
+Uploaders: rick klau <gv.office.us@gmail.com>
+Build-Depends: debhelper,
+ devscripts,
+ bash-completion,
+ libboost-system-dev (>> 1.35) | libboost-system1.35-dev,
+ libdb4.8++-dev,
+ libssl-dev,
+ pkg-config,
+ libminiupnpc8-dev,
+ libboost-filesystem-dev (>> 1.35) | libboost-filesystem1.35-dev,
+ libboost-program-options-dev (>> 1.35) | libboost-program-options1.35-dev,
+ libboost-thread-dev (>> 1.35) | libboost-thread1.35-dev,
+ libboost-test-dev (>> 1.35) | libboost-test1.35-dev,
+ qt4-qmake,
+ libqt4-dev,
+ libqrencode-dev
+Standards-Version: 1.3.2
+Homepage: http://www.icardgod.com/
+Vcs-Git: https://github.com/icardgod/A-Gold-Coin.git
+Vcs-Browser: https://github.com/icardgod/A-Gold-Coin
+
+Package: Agoldcoind
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - daemon
+ Agoldcoin is a free open source peer-to-peer electronic cash system that
+ is completely decentralized, without the need for a central server or
+ trusted parties.  Users hold the crypto keys to their own money and
+ transact directly with each other, with the help of a P2P network to
+ check for double-spending.
+ .
+ By default connects to an IRC network to discover other peers.
+ .
+ Full transaction history is stored locally at each client.  This
+ requires 2+ GB of space, slowly growing.
+ .
+ This package provides Agoldcoind, a combined daemon and CLI tool to
+ interact with the daemon.
+
+Package: Agoldcoin-qt
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: peer-to-peer network based digital currency - Qt GUI
+ Agoldcoin is a free open source peer-to-peer electronic cash system that
+ is completely decentralized, without the need for a central server or
+ trusted parties.  Users hold the crypto keys to their own money and
+ transact directly with each other, with the help of a P2P network to
+ check for double-spending.
+ .
+ By default connects to an IRC network to discover other peers.
+ .
+ Full transaction history is stored locally at each client.  This
+ requires 2+ GB of space, slowly growing.
+ .
+ This package provides Agoldcoin-Qt, a GUI for Agoldcoin based on Qt.

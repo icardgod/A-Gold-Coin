@@ -1,0 +1,9 @@
+Building AGOLD
+
+See doc/readme-qt.rst for instructions on building AGOLD QT,
+the intended-for-end-users, nice-graphical-interface, reference
+implementation of AGOLD.
+
+See doc/build-*.txt for instructions on building AGOLD,
+the intended-for-services, no-graphical-interface, reference
+implementation of AGOLD.
