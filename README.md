@@ -12,8 +12,6 @@ Repository Contents
 
 ./contrib   Scripts and data files for agoldcoin integrators.
 
-./build     Intermediate and final build outputs.
-
 ./share     Platform or IDE-specific project files.
 
 ./doc       Documentation and example configuration files.
